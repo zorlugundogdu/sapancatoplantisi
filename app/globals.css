@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+
+@import "tailwindcss";
+
+:root {
+  --avene-coral: #d4614a;
+  --avene-coral-light: #e8735a;
+  --ducray-blue: #1a6bb5;
+  --ducray-blue-deep: #0d3d6e;
+  --avene-light: #c8e3f0;
+  --gold: #c9a96e;
+  --gold-light: #e8d5b0;
+  --charcoal: #1a1e2e;
+  --mol-dark: #2a1a2e;
+  --text-dark: #1e2235;
+  --text-mid: #3a3f5c;
+  --text-light: #6b7090;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--charcoal);
+  color: #fff;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--charcoal); }
+::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 3px; }
+
+.font-cormorant { font-family: 'Cormorant Garamond', serif; }
+
+.section-eyebrow {
+  display: inline-block;
+  font-family: 'Poppins', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  border: 1px solid rgba(201,169,110,0.3);
+  padding: 6px 18px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(32px, 5vw, 52px);
+  font-weight: 300;
+  line-height: 1.15;
+  color: #fff;
+}
+
+.timeline-item {
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.timeline-item.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@keyframes scrollBounce {
+  0%, 100% { transform: translateY(0); opacity: 1; }
+  50% { transform: translateY(8px); opacity: 0.5; }
+}
+.scroll-hint-arrow { animation: scrollBounce 2s ease-in-out infinite; }
+
+@keyframes rippleAnim {
+  0% { transform: scale(0.8); opacity: 0.6; }
+  100% { transform: scale(2.5); opacity: 0; }
+}
+.ripple-circle { animation: rippleAnim 3s ease-out infinite; }
+
+@keyframes floatUp {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+.brand-bg-float { animation: floatUp 6s ease-in-out infinite; }
+
+@keyframes glowPulse {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.1); }
+}
+.glow-pulse { animation: glowPulse 4s ease-in-out infinite; }

@@ -1,0 +1,128 @@
+{
+  "event": {
+    "title": "Cilt Konuşur,",
+    "titleEmphasis": "Uzman Anlar",
+    "tag": "Eczane Uzmanları Buluşması · 2025",
+    "motto": "\"Fark Yaratan Formüller, Fark Yaratan Uzmanlar\"",
+    "location": "Sapanca",
+    "venue": "Elite World Grand",
+    "year": "2025"
+  },
+  "venue": {
+    "eyebrow": "Buluşma Noktası",
+    "title": "Sapanca'nın",
+    "titleEmphasis": "Kalbinde",
+    "titleSuffix": " Bir Lansman",
+    "hotelName": "Elite World\nGrand Sapanca",
+    "description": "Sapanca Gölü'nün huzurlu atmosferinde, inovasyonun ve uzmanlığın buluştuğu özel bir etkinlik. Doğanın ilhamıyla bilimin gücünü bir araya getiriyoruz.",
+    "features": [
+      "Göl manzaralı toplantı salonları",
+      "5 yıldızlı konaklama imkânı",
+      "Gala akşam yemeği",
+      "Uzman workshopları",
+      "Ürün deneyim alanı",
+      "1:1 marka brifingi"
+    ]
+  },
+  "program": {
+    "eyebrow": "Gün Programı",
+    "title": "Etkinlik",
+    "titleEmphasis": "Akışı",
+    "items": [
+      {
+        "time": "09:00",
+        "color": "gold",
+        "label": "Açılış",
+        "title": "Kayıt & Karşılama Kahvesi",
+        "desc": "Uzmanların buluşması, networking ve göl manzarası eşliğinde kahvaltı"
+      },
+      {
+        "time": "10:00",
+        "color": "gold",
+        "label": "Açılış Konuşması",
+        "title": "İnovasyon Sezonuna Hoşgeldiniz",
+        "desc": "2025'in vizyonu ve iki markanın inovasyon hikâyesi"
+      },
+      {
+        "time": "10:30",
+        "color": "avene",
+        "label": "Avène Lansmanı",
+        "title": "Hyaluron Activ B3 — Procedure",
+        "desc": "Klinik çalışmalar, formül bilimi ve hasta profili sunumu"
+      },
+      {
+        "time": "12:00",
+        "color": "white",
+        "label": "Ara",
+        "title": "Öğle Yemeği",
+        "desc": "Göl terası, networking"
+      },
+      {
+        "time": "13:30",
+        "color": "ducray",
+        "label": "Ducray Lansmanı",
+        "title": "2025 Yeni Ürün Ailesi",
+        "desc": "Saç derisi bilimi, inovatif formüller ve eczane stratejisi"
+      },
+      {
+        "time": "15:00",
+        "color": "avene",
+        "label": "Workshop",
+        "title": "Uzman Deneyim Alanı",
+        "desc": "Ürün test istasyonları, vaka analizleri, soru & cevap"
+      },
+      {
+        "time": "19:00",
+        "color": "gold",
+        "label": "Kapanış",
+        "title": "Gala Akşam Yemeği",
+        "desc": "Sapanca gölü kenarında kutlama akşamı"
+      }
+    ]
+  },
+  "brands": {
+    "eyebrow": "Yılın İnovasyonları",
+    "title": "İki Marka,",
+    "titleEmphasis": "Sonsuz Yenilik",
+    "avene": {
+      "bgText": "AVÈNE",
+      "productName": "Hyaluron Activ B3",
+      "productTagline": "Procedure · Hücre yenileme serisi · Klinik etkinlik",
+      "highlight": "\"Duyarlı cildin en ileri bilimsel formülasyonu — procedure hassasiyetiyle\"",
+      "listTitle": "2025 Yenilikleri",
+      "listItems": [
+        "Hyaluron Activ B3 Procedure Serisi",
+        "Yenilenmiş Thermal Spring Water formülasyonu",
+        "Sensitive Skin yeni jenerasyon çözümler"
+      ]
+    },
+    "ducray": {
+      "bgText": "DUCRAY",
+      "productName": "2025 Yeni Serisi",
+      "productTagline": "Saç derisi bilimi · İnovatif aktif bileşenler",
+      "highlight": "\"Saç ve deri sorunlarında dermatolojik çözümler — kanıtlanmış bilimle\"",
+      "listTitle": "2025 Yenilikleri",
+      "listItems": [
+        "Yeni nesil saç dökülmesi formülleri",
+        "Kepek karşıtı inovatif serisi",
+        "Sensitif saç derisi çözümleri"
+      ]
+    }
+  },
+  "cta": {
+    "title": "Sizi Aramızda",
+    "titleLine2": "Görmek İstiyoruz",
+    "desc": "Bu özel buluşmaya katılım için temsilcinizle iletişime geçin veya kayıt formunu doldurun.",
+    "details": [
+      { "icon": "📍", "text": "Elite World Grand Hotel, Sapanca" },
+      { "icon": "👥", "text": "Eczane Uzmanlarına Özel Davet" },
+      { "icon": "✨", "text": "Avène & Ducray 2025 Lansmanları" }
+    ],
+    "buttonText": "Katılım Formu",
+    "buttonHref": "#"
+  },
+  "footer": {
+    "logos": ["Avène", "Ducray", "Pierre Fabre"],
+    "copy": "© 2025 Pierre Fabre Laboratoires · Eczane Uzmanları Buluşması · Sapanca"
+  }
+}
