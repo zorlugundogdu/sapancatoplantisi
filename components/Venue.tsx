@@ -1,4 +1,4 @@
-import { imgSrc } from "./PhotoBg";
+import { imgSrc, photoBgStyle } from "./PhotoBg";
 
 interface VenueContent {
   eyebrow: string;
@@ -14,16 +14,10 @@ export default function Venue({ data }: { data: VenueContent }) {
   return (
     <section
       id="venue"
-      className="relative section-pad overflow-hidden"
-      style={{ background: "linear-gradient(160deg, #1a1e2e 0%, #2a1a2e 100%)" }}
+      className="photo-bg section-pad overflow-hidden"
     >
-      {/* Decorative glow */}
-      <div
-        className="glow-pulse absolute top-1/2 left-1/4 -translate-y-1/2 w-96 h-96 rounded-full pointer-events-none"
-        style={{
-          background: "radial-gradient(circle, rgba(212,97,74,0.08) 0%, transparent 70%)",
-        }}
-      />
+      <div className="photo-bg-img" style={photoBgStyle()} />
+      <div className="photo-bg-overlay" />
 
       <div className="max-w-5xl mx-auto">
         {/* Header */}
