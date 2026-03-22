@@ -32,8 +32,9 @@ function BrandPanel({
 
   return (
     <div
-      className="relative rounded-2xl p-8 overflow-hidden"
+      className="relative rounded-2xl overflow-hidden"
       style={{
+        padding: "clamp(20px, 5vw, 32px)",
         background: bgGradient,
         border: `1px solid ${isAvene ? "rgba(212,97,74,0.2)" : "rgba(26,107,181,0.2)"}`,
       }}
@@ -129,7 +130,7 @@ export default function Brands({ data }: { data: BrandsContent }) {
   return (
     <section
       id="brands"
-      className="photo-bg py-24 px-6"
+      className="photo-bg section-pad"
     >
       <div className="photo-bg-img" style={photoBgStyle()} />
       <div className="photo-bg-overlay" />

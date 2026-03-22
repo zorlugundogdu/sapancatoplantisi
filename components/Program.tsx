@@ -57,7 +57,7 @@ export default function Program({ data }: { data: ProgramContent }) {
   return (
     <section
       id="program"
-      className="photo-bg py-24 px-6"
+      className="photo-bg section-pad"
     >
       <div className="photo-bg-img" style={photoBgStyle()} />
       <div className="photo-bg-overlay" />
@@ -74,63 +74,47 @@ export default function Program({ data }: { data: ProgramContent }) {
         </div>
 
         {/* Timeline */}
-        <div
-          className="relative pl-20"
-          style={{
-            borderLeft: "1px solid rgba(201,169,110,0.15)",
-            marginLeft: "42px",
-          }}
-        >
+        <div className="space-y-0">
           {data.items.map((item, i) => (
             <div
               key={i}
               ref={(el) => { itemsRef.current[i] = el; }}
-              className="timeline-item relative mb-10 last:mb-0"
+              className="timeline-item flex gap-4 pb-8 last:pb-0"
             >
-              {/* Time */}
-              <span
-                className="absolute font-light"
-                style={{
-                  left: "-88px",
-                  top: "2px",
-                  fontFamily: "'Poppins', sans-serif",
-                  fontSize: "12px",
-                  color: "rgba(255,255,255,0.4)",
-                  letterSpacing: "0.05em",
-                }}
-              >
-                {item.time}
-              </span>
+              {/* Left: dot + line */}
+              <div className="flex flex-col items-center flex-shrink-0" style={{ width: "32px" }}>
+                <div
+                  className="w-3 h-3 rounded-full flex-shrink-0 mt-1"
+                  style={{
+                    background: dotColors[item.color],
+                    boxShadow: `0 0 8px ${dotColors[item.color]}`,
+                  }}
+                />
+                {i < data.items.length - 1 && (
+                  <div className="flex-1 w-px mt-2" style={{ background: "rgba(201,169,110,0.15)", minHeight: "24px" }} />
+                )}
+              </div>
 
-              {/* Dot */}
-              <div
-                className="absolute w-3 h-3 rounded-full"
-                style={{
-                  left: "-48px",
-                  top: "4px",
-                  background: dotColors[item.color],
-                  boxShadow: `0 0 8px ${dotColors[item.color]}`,
-                }}
-              />
-
-              {/* Content */}
-              <div>
-                <span
-                  className="text-xs font-medium uppercase tracking-widest block mb-1"
-                  style={{ color: labelColors[item.color], fontSize: "10px" }}
-                >
-                  {item.label}
-                </span>
-                <h4
-                  className="font-medium mb-1"
-                  style={{ color: "#fff", fontSize: "15px" }}
-                >
+              {/* Right: content */}
+              <div className="flex-1 pb-2">
+                <div className="flex items-center gap-3 mb-1 flex-wrap">
+                  <span
+                    className="font-light"
+                    style={{ fontSize: "12px", color: "rgba(255,255,255,0.4)", letterSpacing: "0.05em" }}
+                  >
+                    {item.time}
+                  </span>
+                  <span
+                    className="font-medium uppercase tracking-widest"
+                    style={{ color: labelColors[item.color], fontSize: "9px" }}
+                  >
+                    {item.label}
+                  </span>
+                </div>
+                <h4 className="font-medium mb-1" style={{ color: "#fff", fontSize: "15px" }}>
                   {item.title}
                 </h4>
-                <p
-                  className="font-light leading-relaxed"
-                  style={{ color: "rgba(255,255,255,0.5)", fontSize: "13px" }}
-                >
+                <p className="font-light leading-relaxed" style={{ color: "rgba(255,255,255,0.5)", fontSize: "13px" }}>
                   {item.desc}
                 </p>
               </div>

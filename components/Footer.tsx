@@ -8,7 +8,7 @@ interface FooterContent {
 export default function Footer({ data }: { data: FooterContent }) {
   return (
     <footer
-      className="photo-bg py-12 px-6 text-center"
+      className="photo-bg section-pad text-center"
       style={{ borderTop: "1px solid rgba(201,169,110,0.15)" }}
     >
       <div className="photo-bg-img" style={photoBgStyle()} />

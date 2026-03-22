@@ -18,14 +18,15 @@ export default function CTA({ data }: { data: CTAContent }) {
   return (
     <section
       id="katilim"
-      className="photo-bg py-24 px-6 overflow-hidden"
+      className="photo-bg section-pad overflow-hidden"
     >
       <div className="photo-bg-img" style={photoBgStyle()} />
       <div className="photo-bg-overlay" />
       <div className="max-w-xl mx-auto">
         <div
-          className="rounded-2xl p-10 text-center"
+          className="rounded-2xl text-center"
           style={{
+            padding: "clamp(20px, 6vw, 40px)",
             background: "rgba(255,255,255,0.03)",
             border: "1px solid rgba(201,169,110,0.15)",
             backdropFilter: "blur(10px)",

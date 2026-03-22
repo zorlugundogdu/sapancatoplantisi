@@ -14,7 +14,7 @@ export default function Venue({ data }: { data: VenueContent }) {
   return (
     <section
       id="venue"
-      className="relative py-24 px-6 overflow-hidden"
+      className="relative section-pad overflow-hidden"
       style={{ background: "linear-gradient(160deg, #1a1e2e 0%, #2a1a2e 100%)" }}
     >
       {/* Decorative glow */}

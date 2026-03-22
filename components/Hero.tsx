@@ -47,42 +47,39 @@ export default function Hero({ data }: { data: HeroContent }) {
       />
 
       {/* Content */}
-      <div className="relative z-10 px-6 max-w-3xl mx-auto">
+      <div className="relative z-10 w-full max-w-3xl mx-auto" style={{ padding: "0 clamp(16px, 5vw, 24px)" }}>
         {/* Logos */}
-        <div className="flex items-center justify-center gap-6 mb-10">
+        <div className="flex items-center justify-center gap-3 mb-8 flex-wrap">
           <div
-            className="flex items-center justify-center rounded-lg px-4 py-2"
+            className="flex items-center justify-center rounded-lg px-3 py-2"
             style={{ background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.12)", backdropFilter: "blur(8px)" }}
           >
             <img
               src={imgSrc("/avene-logo.png")}
               alt="Avène"
-              style={{ objectFit: "contain", maxHeight: "60px", maxWidth: "160px" }}
+              style={{ objectFit: "contain", height: "44px", maxWidth: "130px", width: "auto" }}
             />
           </div>
+          <div className="w-px h-10 opacity-30" style={{ background: "var(--gold)" }} />
           <div
-            className="w-px h-12 opacity-30"
-            style={{ background: "var(--gold)" }}
-          />
-          <div
-            className="flex items-center justify-center rounded-lg px-4 py-2"
+            className="flex items-center justify-center rounded-lg px-3 py-2"
             style={{ background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.12)", backdropFilter: "blur(8px)" }}
           >
             <img
               src={imgSrc("/ducray-logo.png")}
               alt="Ducray"
-              style={{ objectFit: "contain", maxHeight: "60px", maxWidth: "140px" }}
+              style={{ objectFit: "contain", height: "44px", maxWidth: "110px", width: "auto" }}
             />
           </div>
         </div>
 
         {/* Tag */}
-        <span className="section-eyebrow block mb-6">{data.tag}</span>
+        <span className="section-eyebrow block mb-5" style={{ fontSize: "10px" }}>{data.tag}</span>
 
         {/* Title */}
         <h1
-          className="font-light leading-tight mb-6"
-          style={{ fontFamily: "'Poppins', sans-serif", fontSize: "clamp(32px, 6vw, 64px)", color: "#fff" }}
+          className="font-light leading-tight mb-5"
+          style={{ fontFamily: "'Poppins', sans-serif", fontSize: "clamp(26px, 7vw, 64px)", color: "#fff" }}
         >
           {data.title}{" "}
           <em style={{ fontStyle: "italic", color: "var(--gold)" }}>
@@ -92,46 +89,35 @@ export default function Hero({ data }: { data: HeroContent }) {
 
         {/* Motto */}
         <p
-          className="font-light mb-12 opacity-80"
+          className="font-light mb-10 opacity-80"
           style={{
-            fontSize: "clamp(13px, 1.5vw, 15px)",
+            fontSize: "clamp(12px, 3.5vw, 15px)",
             color: "var(--gold-light)",
             fontFamily: "'Poppins', sans-serif",
             fontStyle: "italic",
             fontWeight: 300,
-            letterSpacing: "0.04em",
           }}
         >
           {data.motto}
         </p>
 
         {/* Meta */}
-        <div className="flex flex-wrap items-center justify-center gap-4 mb-14">
+        <div
+          className="flex items-center justify-center gap-3 mb-12 flex-wrap"
+          style={{ rowGap: "12px" }}
+        >
           {[
-            { icon: "📍", value: data.location, label: "Lokasyon" },
-            { icon: "🏨", value: data.venue, label: "Venue" },
-            { icon: "📅", value: data.year, label: "Sezon" },
+            { value: data.location, label: "Lokasyon" },
+            { value: data.venue, label: "Venue" },
+            { value: data.year, label: "Sezon" },
           ].map((item, i) => (
             <div key={i} className="flex items-center gap-3">
               {i > 0 && (
-                <div
-                  className="w-px h-8 opacity-20 hidden sm:block"
-                  style={{ background: "var(--gold)" }}
-                />
+                <div className="w-px h-6 opacity-20 hidden xs:block" style={{ background: "var(--gold)" }} />
               )}
               <div className="text-center">
-                <div
-                  className="font-semibold text-sm"
-                  style={{ color: "#fff" }}
-                >
-                  {item.value}
-                </div>
-                <div
-                  className="text-xs opacity-60 uppercase tracking-widest"
-                  style={{ fontSize: "9px", color: "var(--gold-light)" }}
-                >
-                  {item.label}
-                </div>
+                <div className="font-medium text-xs text-white">{item.value}</div>
+                <div className="uppercase tracking-widest opacity-50" style={{ fontSize: "8px", color: "var(--gold-light)" }}>{item.label}</div>
               </div>
             </div>
           ))}

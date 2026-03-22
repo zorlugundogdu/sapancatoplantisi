@@ -3,7 +3,7 @@ import { photoBgStyle } from "./PhotoBg";
 export default function Motto() {
   return (
     <section
-      className="photo-bg py-24 px-6 text-center overflow-hidden"
+      className="photo-bg section-pad text-center overflow-hidden"
     >
       <div className="photo-bg-img" style={photoBgStyle()} />
       <div className="photo-bg-overlay" />

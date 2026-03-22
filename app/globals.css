@@ -30,6 +30,14 @@ body {
 ::-webkit-scrollbar-track { background: var(--charcoal); }
 ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 3px; }
 
+/* Responsive section padding */
+.section-pad {
+  padding-top: clamp(48px, 8vw, 96px);
+  padding-bottom: clamp(48px, 8vw, 96px);
+  padding-left: clamp(16px, 5vw, 24px);
+  padding-right: clamp(16px, 5vw, 24px);
+}
+
 .section-eyebrow {
   display: inline-block;
   font-family: 'Poppins', sans-serif;
