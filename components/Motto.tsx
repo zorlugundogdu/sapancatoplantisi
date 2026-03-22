@@ -1,29 +1,14 @@
 export default function Motto() {
   return (
     <section
-      className="relative py-24 px-6 text-center overflow-hidden"
-      style={{
-        background: "linear-gradient(135deg, #0d1220 0%, #1a0a1e 50%, #0d1220 100%)",
-      }}
+      className="photo-bg py-24 px-6 text-center overflow-hidden"
     >
-      {/* Glow */}
-      <div
-        className="glow-pulse absolute inset-0 flex items-center justify-center pointer-events-none"
-      >
-        <div
-          className="w-96 h-96 rounded-full"
-          style={{
-            background: "radial-gradient(circle, rgba(201,169,110,0.08) 0%, transparent 70%)",
-          }}
-        />
-      </div>
-
-      <div className="relative z-10">
+      <div>
         <div
           className="font-light leading-tight mb-6"
           style={{
-            fontFamily: "'Cormorant Garamond', serif",
-            fontSize: "clamp(28px, 5vw, 52px)",
+            fontFamily: "'Poppins', sans-serif",
+            fontSize: "clamp(22px, 4vw, 42px)",
           }}
         >
           <span style={{ color: "var(--gold)" }}>Cilt Konuşur,</span>

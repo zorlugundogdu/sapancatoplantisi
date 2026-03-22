@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 interface BrandData {
   bgText: string;
   productName: string;
@@ -36,30 +38,15 @@ function BrandPanel({
         border: `1px solid ${isAvene ? "rgba(212,97,74,0.2)" : "rgba(26,107,181,0.2)"}`,
       }}
     >
-      {/* Background text */}
-      <div
-        className="brand-bg-float absolute top-4 right-4 font-bold opacity-5 select-none pointer-events-none leading-none"
-        style={{
-          fontFamily: "'Cormorant Garamond', serif",
-          fontSize: "clamp(60px, 8vw, 100px)",
-          color: accentColor,
-        }}
-      >
-        {brand.bgText}
-      </div>
-
-      {/* Logo name */}
+      {/* Logo */}
       <div className="mb-6">
-        <span
-          className="font-light tracking-widest"
-          style={{
-            fontFamily: "'Cormorant Garamond', serif",
-            fontSize: "28px",
-            color: accentColor,
-          }}
-        >
-          {isAvene ? "Avène" : "Ducray"}
-        </span>
+        <Image
+          src={isAvene ? "/avene-logo.png" : "/ducray-logo.png"}
+          alt={isAvene ? "Avène" : "Ducray"}
+          width={140}
+          height={52}
+          style={{ objectFit: "contain", maxHeight: "52px" }}
+        />
       </div>
 
       {/* Product card */}
@@ -144,8 +131,7 @@ export default function Brands({ data }: { data: BrandsContent }) {
   return (
     <section
       id="brands"
-      className="relative py-24 px-6"
-      style={{ background: "linear-gradient(180deg, #1a1e2e 0%, #0d1220 100%)" }}
+      className="photo-bg py-24 px-6"
     >
       <div className="max-w-5xl mx-auto">
         {/* Header */}

@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 interface HeroContent {
   title: string;
   titleEmphasis: string;
@@ -48,22 +50,34 @@ export default function Hero({ data }: { data: HeroContent }) {
       <div className="relative z-10 px-6 max-w-3xl mx-auto">
         {/* Logos */}
         <div className="flex items-center justify-center gap-6 mb-10">
-          <span
-            className="text-2xl font-light tracking-widest"
-            style={{ fontFamily: "'Cormorant Garamond', serif", color: "var(--avene-coral)" }}
-          >
-            Avène
-          </span>
           <div
-            className="w-px h-8 opacity-40"
+            className="flex items-center justify-center rounded-lg px-4 py-2"
+            style={{ background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.12)", backdropFilter: "blur(8px)" }}
+          >
+            <Image
+              src="/avene-logo.png"
+              alt="Avène"
+              width={160}
+              height={60}
+              style={{ objectFit: "contain", maxHeight: "60px" }}
+            />
+          </div>
+          <div
+            className="w-px h-12 opacity-30"
             style={{ background: "var(--gold)" }}
           />
-          <span
-            className="text-2xl font-light tracking-widest"
-            style={{ fontFamily: "'Cormorant Garamond', serif", color: "var(--ducray-blue)" }}
+          <div
+            className="flex items-center justify-center rounded-lg px-4 py-2"
+            style={{ background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.12)", backdropFilter: "blur(8px)" }}
           >
-            Ducray
-          </span>
+            <Image
+              src="/ducray-logo.png"
+              alt="Ducray"
+              width={140}
+              height={60}
+              style={{ objectFit: "contain", maxHeight: "60px" }}
+            />
+          </div>
         </div>
 
         {/* Tag */}
@@ -71,8 +85,8 @@ export default function Hero({ data }: { data: HeroContent }) {
 
         {/* Title */}
         <h1
-          className="font-cormorant font-light leading-tight mb-6"
-          style={{ fontSize: "clamp(40px, 7vw, 72px)", color: "#fff" }}
+          className="font-light leading-tight mb-6"
+          style={{ fontFamily: "'Poppins', sans-serif", fontSize: "clamp(32px, 6vw, 64px)", color: "#fff" }}
         >
           {data.title}{" "}
           <em style={{ fontStyle: "italic", color: "var(--gold)" }}>
@@ -84,11 +98,12 @@ export default function Hero({ data }: { data: HeroContent }) {
         <p
           className="font-light mb-12 opacity-80"
           style={{
-            fontSize: "clamp(13px, 1.5vw, 16px)",
+            fontSize: "clamp(13px, 1.5vw, 15px)",
             color: "var(--gold-light)",
-            fontFamily: "'Cormorant Garamond', serif",
+            fontFamily: "'Poppins', sans-serif",
             fontStyle: "italic",
-            letterSpacing: "0.05em",
+            fontWeight: 300,
+            letterSpacing: "0.04em",
           }}
         >
           {data.motto}

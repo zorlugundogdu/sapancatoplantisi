@@ -55,7 +55,7 @@ export default function Venue({ data }: { data: VenueContent }) {
             <div className="absolute inset-0 flex items-end p-5">
               <span
                 className="text-sm font-light tracking-wider"
-                style={{ color: "var(--gold-light)", fontFamily: "'Cormorant Garamond', serif" }}
+                style={{ color: "var(--gold-light)", fontFamily: "'Poppins', sans-serif" }}
               >
                 Elite World Grand Sapanca
               </span>
@@ -67,7 +67,7 @@ export default function Venue({ data }: { data: VenueContent }) {
             <h3
               className="font-light mb-4 leading-tight"
               style={{
-                fontFamily: "'Cormorant Garamond', serif",
+                fontFamily: "'Poppins', sans-serif",
                 fontSize: "clamp(26px, 3vw, 36px)",
                 color: "#fff",
                 whiteSpace: "pre-line",

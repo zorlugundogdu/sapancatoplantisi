@@ -16,16 +16,8 @@ export default function CTA({ data }: { data: CTAContent }) {
   return (
     <section
       id="katilim"
-      className="relative py-24 px-6 overflow-hidden"
-      style={{ background: "linear-gradient(160deg, #1a1e2e 0%, #2a1a2e 100%)" }}
+      className="photo-bg py-24 px-6 overflow-hidden"
     >
-      {/* Decorative glow */}
-      <div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full pointer-events-none"
-        style={{
-          background: "radial-gradient(circle, rgba(201,169,110,0.06) 0%, transparent 70%)",
-        }}
-      />
 
       <div className="relative z-10 max-w-xl mx-auto">
         <div
@@ -40,8 +32,8 @@ export default function CTA({ data }: { data: CTAContent }) {
           <h3
             className="font-light leading-tight mb-4"
             style={{
-              fontFamily: "'Cormorant Garamond', serif",
-              fontSize: "clamp(28px, 4vw, 40px)",
+              fontFamily: "'Poppins', sans-serif",
+              fontSize: "clamp(22px, 3.5vw, 34px)",
               color: "#fff",
             }}
           >

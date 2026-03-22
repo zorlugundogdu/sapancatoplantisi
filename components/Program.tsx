@@ -56,8 +56,7 @@ export default function Program({ data }: { data: ProgramContent }) {
   return (
     <section
       id="program"
-      className="relative py-24 px-6"
-      style={{ background: "linear-gradient(180deg, #0d1220 0%, #1a1e2e 100%)" }}
+      className="photo-bg py-24 px-6"
     >
       <div className="max-w-2xl mx-auto">
         {/* Header */}

@@ -30,8 +30,6 @@ body {
 ::-webkit-scrollbar-track { background: var(--charcoal); }
 ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 3px; }
 
-.font-cormorant { font-family: 'Cormorant Garamond', serif; }
-
 .section-eyebrow {
   display: inline-block;
   font-family: 'Poppins', sans-serif;
@@ -47,11 +45,38 @@ body {
 }
 
 .section-title {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(32px, 5vw, 52px);
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(28px, 4.5vw, 46px);
   font-weight: 300;
-  line-height: 1.15;
+  line-height: 1.2;
   color: #fff;
+}
+
+/* Shared photo background sections */
+.photo-bg {
+  position: relative;
+}
+.photo-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('/avdu-bg.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  opacity: 1;
+  z-index: 0;
+}
+.photo-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(8, 11, 22, 0.82);
+  z-index: 1;
+}
+.photo-bg > * {
+  position: relative;
+  z-index: 2;
 }
 
 .timeline-item {
