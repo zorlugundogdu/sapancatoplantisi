@@ -12,14 +12,17 @@ interface CTAContent {
   buttonHref: string;
 }
 
+import { photoBgStyle } from "./PhotoBg";
+
 export default function CTA({ data }: { data: CTAContent }) {
   return (
     <section
       id="katilim"
       className="photo-bg py-24 px-6 overflow-hidden"
     >
-
-      <div className="relative z-10 max-w-xl mx-auto">
+      <div className="photo-bg-img" style={photoBgStyle()} />
+      <div className="photo-bg-overlay" />
+      <div className="max-w-xl mx-auto">
         <div
           className="rounded-2xl p-10 text-center"
           style={{

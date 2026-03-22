@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import { imgSrc } from "./PhotoBg";
 
 interface HeroContent {
   title: string;
@@ -22,7 +22,7 @@ export default function Hero({ data }: { data: HeroContent }) {
       <div
         className="absolute inset-0 opacity-20"
         style={{
-          backgroundImage: "url('/avdu-bg.png')",
+          backgroundImage: `url('${imgSrc("/avdu-bg.png")}')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
@@ -54,12 +54,10 @@ export default function Hero({ data }: { data: HeroContent }) {
             className="flex items-center justify-center rounded-lg px-4 py-2"
             style={{ background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.12)", backdropFilter: "blur(8px)" }}
           >
-            <Image
-              src="/avene-logo.png"
+            <img
+              src={imgSrc("/avene-logo.png")}
               alt="Avène"
-              width={160}
-              height={60}
-              style={{ objectFit: "contain", maxHeight: "60px" }}
+              style={{ objectFit: "contain", maxHeight: "60px", maxWidth: "160px" }}
             />
           </div>
           <div
@@ -70,12 +68,10 @@ export default function Hero({ data }: { data: HeroContent }) {
             className="flex items-center justify-center rounded-lg px-4 py-2"
             style={{ background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.12)", backdropFilter: "blur(8px)" }}
           >
-            <Image
-              src="/ducray-logo.png"
+            <img
+              src={imgSrc("/ducray-logo.png")}
               alt="Ducray"
-              width={140}
-              height={60}
-              style={{ objectFit: "contain", maxHeight: "60px" }}
+              style={{ objectFit: "contain", maxHeight: "60px", maxWidth: "140px" }}
             />
           </div>
         </div>

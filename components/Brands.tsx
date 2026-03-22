@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { imgSrc, photoBgStyle } from "./PhotoBg";
 
 interface BrandData {
   bgText: string;
@@ -40,12 +40,10 @@ function BrandPanel({
     >
       {/* Logo */}
       <div className="mb-6">
-        <Image
-          src={isAvene ? "/avene-logo.png" : "/ducray-logo.png"}
+        <img
+          src={imgSrc(isAvene ? "/avene-logo.png" : "/ducray-logo.png")}
           alt={isAvene ? "Avène" : "Ducray"}
-          width={140}
-          height={52}
-          style={{ objectFit: "contain", maxHeight: "52px" }}
+          style={{ objectFit: "contain", maxHeight: "52px", maxWidth: "140px" }}
         />
       </div>
 
@@ -133,6 +131,8 @@ export default function Brands({ data }: { data: BrandsContent }) {
       id="brands"
       className="photo-bg py-24 px-6"
     >
+      <div className="photo-bg-img" style={photoBgStyle()} />
+      <div className="photo-bg-overlay" />
       <div className="max-w-5xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">

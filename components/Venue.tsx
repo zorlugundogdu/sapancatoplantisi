@@ -1,3 +1,5 @@
+import { imgSrc } from "./PhotoBg";
+
 interface VenueContent {
   eyebrow: string;
   title: string;
@@ -47,7 +49,7 @@ export default function Venue({ data }: { data: VenueContent }) {
             <div
               className="absolute inset-0 opacity-30"
               style={{
-                backgroundImage: "url('/avdu-bg.png')",
+                backgroundImage: `url('${imgSrc("/avdu-bg.png")}')`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}

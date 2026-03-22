@@ -52,31 +52,23 @@ body {
   color: #fff;
 }
 
-/* Shared photo background sections */
+/* Shared photo background sections — bg image injected via inline style in component */
 .photo-bg {
   position: relative;
+  isolation: isolate;
 }
-.photo-bg::before {
-  content: '';
+.photo-bg-img {
   position: absolute;
   inset: 0;
-  background-image: url('/avdu-bg.png');
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
-  opacity: 1;
-  z-index: 0;
+  z-index: -2;
 }
-.photo-bg::after {
-  content: '';
+.photo-bg-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(8, 11, 22, 0.82);
-  z-index: 1;
-}
-.photo-bg > * {
-  position: relative;
-  z-index: 2;
+  background: rgba(8, 11, 22, 0.83);
+  z-index: -1;
 }
 
 .timeline-item {

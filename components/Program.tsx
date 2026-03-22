@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { photoBgStyle } from "./PhotoBg";
 
 export interface ProgramItem {
   time: string;
@@ -58,6 +59,8 @@ export default function Program({ data }: { data: ProgramContent }) {
       id="program"
       className="photo-bg py-24 px-6"
     >
+      <div className="photo-bg-img" style={photoBgStyle()} />
+      <div className="photo-bg-overlay" />
       <div className="max-w-2xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
