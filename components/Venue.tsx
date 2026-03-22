@@ -44,15 +44,16 @@ export default function Venue({ data }: { data: VenueContent }) {
           {/* Image placeholder */}
           <div
             className="relative rounded-2xl overflow-hidden"
-            style={{ minHeight: "280px", background: "rgba(255,255,255,0.03)", border: "1px solid rgba(201,169,110,0.15)" }}
+            style={{ minHeight: "280px", border: "1px solid rgba(201,169,110,0.15)" }}
           >
+            <img
+              src={imgSrc("/sapancaeliteworld.webp")}
+              alt="Elite World Grand Sapanca"
+              style={{ width: "100%", height: "100%", objectFit: "cover", display: "block", position: "absolute", inset: 0 }}
+            />
             <div
-              className="absolute inset-0 opacity-30"
-              style={{
-                backgroundImage: `url('${imgSrc("/avdu-bg.png")}')`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-              }}
+              className="absolute inset-0"
+              style={{ background: "linear-gradient(to top, rgba(0,0,0,0.5) 0%, transparent 60%)" }}
             />
             <div className="absolute inset-0 flex items-end p-5">
               <span
